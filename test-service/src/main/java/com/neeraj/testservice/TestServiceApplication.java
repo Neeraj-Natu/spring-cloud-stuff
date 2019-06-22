@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 @RestController
 public class TestServiceApplication {
 
-  @Value("${eureka.client.region}")
+  @Value("${eureka.instance.metadataMap.zone}")
   public String region;
 
 
@@ -20,7 +20,7 @@ public class TestServiceApplication {
     public String respond()
     {
       
-      return "Hello World !! from region :" + region;
+      return "Hello World !! from region: " + region;
     }
 
 

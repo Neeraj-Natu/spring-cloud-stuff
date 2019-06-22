@@ -1,15 +1,17 @@
 spring:
+  profiles:
+    active: uk
   application:
-    name: test-service
-server:
-  port: 9001
+    name: uk-test-service
 eureka:
   instance:
       lease-renewal-interval-in-seconds: 10
   client:
-    region: UK
+    region: global
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-uk:8762/eureka
-
+      uk_zone: http://eureka-uk:8762/eureka
+      us_zone: http://eureka-us:8761/eureka
+    availability-zones:
+      global: uk_zone,us_zone

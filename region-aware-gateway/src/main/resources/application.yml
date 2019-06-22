@@ -1,7 +1,7 @@
-server:
-  port: 8091
 spring:
-  applciation:
+  profiles:
+    active: us
+  application:
     name: gateway  
 zuul:
   routes:
@@ -11,9 +11,12 @@ zuul:
       serviceId: test-service
 eureka:
   client:
-    region: US
+    region: global
     prefer-same-zone-eureka: true
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-us:8761/eureka
+      us_zone: http://eureka-us:8761/eureka
+      uk_zone: http://eureka-uk:8762/eureka
+    availability-zones:
+      global: us_zone

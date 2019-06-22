@@ -5,7 +5,7 @@ eureka:
     hostname: eureka-uk
     appname: eureka-cluster
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://eureka-us:8761/eureka,http://eureka-uk:8762/eureka
     registerWithEureka: false
     fetchRegistry: false  

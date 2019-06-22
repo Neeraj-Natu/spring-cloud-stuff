@@ -1,0 +1,6 @@
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: eureka-us
+    metadataMap.zone: us_zone
