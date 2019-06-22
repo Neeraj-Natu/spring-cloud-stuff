@@ -11,8 +11,9 @@ zuul:
       serviceId: test-service
 eureka:
   client:
+    region: US
     prefer-same-zone-eureka: true
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-us:8761/eureka,http://eureka-uk:8762/eureka
+      defaultZone: http://eureka-us:8761/eureka

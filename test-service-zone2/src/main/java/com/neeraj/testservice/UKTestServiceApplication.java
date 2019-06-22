@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 @EnableEurekaClient
 @SpringBootApplication
 @RestController
-public class TestServiceApplication {
+public class UKTestServiceApplication {
 
   @Value("${eureka.client.region}")
   public String region;
@@ -24,9 +24,8 @@ public class TestServiceApplication {
     }
 
 
-
 	public static void main(String[] args) {
-		SpringApplication.run(TestServiceApplication.class, args);
+		SpringApplication.run(UKTestServiceApplication.class, args);
 	}
 
 }

@@ -2,14 +2,14 @@ spring:
   application:
     name: test-service
 server:
-  port: 9002
+  port: 9001
 eureka:
   instance:
       lease-renewal-interval-in-seconds: 10
   client:
-    region: US
+    region: UK
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-us:8761/eureka
+      defaultZone: http://eureka-uk:8762/eureka
 
