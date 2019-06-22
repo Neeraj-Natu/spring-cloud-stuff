@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: test-service
+server:
+  port: 9001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-us:8761/eureka
+

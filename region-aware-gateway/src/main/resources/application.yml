@@ -1,0 +1,18 @@
+server:
+  port: 8091
+spring:
+  applciation:
+    name: gateway  
+zuul:
+  routes:
+    test-service:
+      path: /gateway/test/**
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+      serviceId: test-service
+eureka:
+  client:
+    prefer-same-zone-eureka: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-us:8761/eureka,http://eureka-uk:8762/eureka

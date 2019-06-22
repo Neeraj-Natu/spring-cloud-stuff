@@ -1,1 +1,1 @@
-# spring-cloud-stuff
+Checking out region aware spring cloud setup.
