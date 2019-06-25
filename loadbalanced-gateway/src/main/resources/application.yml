@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: loadbalanced-gateway  
+server:
+  port: 8091
+zuul:
+  routes:
+    test-service:
+      path: /gateway/ribbon/test/**
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+      serviceId: servers
+servers:
+  ribbon:
+    listOfServers: http://localhost:9002,http://localhost:9001
+ribbon:
+  eureka: false
+  NFLoadBalancerPingClassName: com.netflix.loadbalancer.PingUrl
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.AvailabilityFilteringRule
+  EnableZoneAffinity: true

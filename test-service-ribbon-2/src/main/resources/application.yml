@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: us-test-service-ribbon-2
+server:
+  port: 9001
